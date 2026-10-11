@@ -125,44 +125,47 @@
 //     }
 //     Console.WriteLine();
 // }
-string paragraph;
-string offer = " ";
-string vowel = "AaEeIiOoUuYy";
-string consonant = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz";
-string highAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// string paragraph;
+// string offer = " ";
+// string vowel = "AaEeIiOoUuYy";
+// string consonant = "BbCcDdFfGgHhJjKkLlMmNnPpQqRrSsTtVvWwXxYyZz";
 
-int countVowel = 0;
-int countConsonant = 0;
-do
-{
-    Console.WriteLine("1 - Проанализировать предложение");
-    Console.WriteLine("2 - Найти позицию первой заглавной буквы");
-    Console.WriteLine("0 - Exit");
+// int countVowel = 0;
+// int countConsonant = 0;
+// do
+// {
+//     Console.WriteLine("1 - Проанализировать предложение");
+//     Console.WriteLine("2 - Найти позицию первой заглавной буквы");
+//     Console.WriteLine("0 - Exit");
 
-    Console.Write("Выберите пункт: ");
-    paragraph = Console.ReadLine();
-    if (paragraph != "0")
-    {
-        Console.Write("Введите предложение: ");
-        offer = Console.ReadLine();
-    }
-    switch (paragraph)
-    {
-        case "1":
-            foreach (char letter in offer)
-            {
-                if (vowel.Contains(letter)) countVowel++;
-                else if (consonant.Contains(letter)) countConsonant++;
-            }
-            Console.WriteLine($"Гласных: {countVowel} \nСогласных: {countConsonant}");
-            break;
-        case "2":
-            for (int i = 0; i < offer.Length; i++)
-            {
-                Console.WriteLine(i);
-                if (char.IsUpper(offer[i])) Console.WriteLine($"Первая заглавная буква: {offer[i]} под индексом {i}"); break;
-            }
-            break;
-        default: break;
-    }
-} while (paragraph != "0");
+//     Console.Write("Выберите пункт: ");
+//     paragraph = Console.ReadLine();
+//     if (paragraph != "0")
+//     {
+//         Console.Write("Введите предложение: ");
+//         offer = Console.ReadLine();
+//     }
+//     switch (paragraph)
+//     {
+//         case "1":
+//             foreach (char letter in offer)
+//             {
+//                 if (vowel.Contains(letter)) countVowel++;
+//                 else if (consonant.Contains(letter)) countConsonant++;
+//             }
+//             Console.WriteLine($"Гласных: {countVowel} \nСогласных: {countConsonant}");
+//             break;
+//         case "2":
+//             for (int i = 0; i < offer.Length; i++)
+//             {
+//                 Console.WriteLine(i);
+//                 if (char.IsUpper(offer[i]))
+//                 {
+//                     Console.WriteLine($"Первая заглавная буква: {offer[i]} под индексом {i}");
+//                     break;
+//                 }
+//             }
+//             break;
+//         default: break;
+//     }
+// } while (paragraph != "0");
